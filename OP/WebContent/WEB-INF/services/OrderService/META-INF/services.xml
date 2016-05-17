@@ -1,0 +1,64 @@
+<service name="OrderService" >
+	<Description>
+		Please Type your service description here
+	</Description>
+	<messageReceivers>
+		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+		<messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+	</messageReceivers>
+	<parameter name="ServiceClass" locked="false">OrderProcess.OrderService</parameter>
+	
+	<parameter name="allItemList">
+        <allItemList>
+            <book>
+                <prize>500</prize>
+                <itemNo>12</itemNo>
+                <itemName>Pizza</itemName>>
+            </book>
+            <book>
+                <prize>350</prize>
+                <itemNo>13</itemNo>
+                <itemName>Rice</itemName>>
+            </book><book>
+                <prize>510</prize>
+                <itemNo>015</itemNo>
+                <itemName>Koddu</itemName>>
+            </book><book>
+                <prize>50</prize>
+                <itemNo>10</itemNo>
+                <itemName>Tea</itemName>>
+            </book><book>
+                <prize>15</prize>
+                <itemNo>25</itemNo>
+                <itemName>Piddu</itemName>>
+            </book>
+        </allItemList>
+        
+        <cardBalance>
+     <card>
+      <cardNo>123456789</cardNo>
+      <cardBal>50000</cardBal>
+      <pinNo>123</pinNo>
+     </card>
+     
+      <card>
+      <cardNo>234567891</cardNo>
+      <cardBal>1000</cardBal>
+      <pinNo>456</pinNo>
+     </card>
+     
+      <card>
+      <cardNo>345678912</cardNo>
+      <cardBal>500</cardBal>
+      <pinNo>789</pinNo>
+     </card>
+     
+      <card>
+      <cardNo>456789123</cardNo>
+      <cardBal>100</cardBal>
+      <pinNo>567</pinNo>
+     </card>
+    
+    </cardBalance>
+    </parameter>
+</service>
